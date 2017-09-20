@@ -14,9 +14,9 @@ sys.setdefaultencoding('utf-8')
 # nltk.download('stopwords')
 
 READFILE = 'data/microblog2011.txt'         #Open raw file here
-EXCLUDE_STOPWORDS = True
-file_source = open(READFILE, 'r')
+EXCLUDE_STOPWORDS = True                    #Set to include/exclude stopwords
 
+file_source = open(READFILE, 'r')
 text = []
 
 #Aggregate all tokens into list

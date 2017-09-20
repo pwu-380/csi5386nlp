@@ -20,7 +20,7 @@ text = []
 for line in range(2):
     line = file_source.readline()
     line = line.lower()
-    print TweetTokenizer().tokenize(line)
+    # print TweetTokenizer().tokenize(line)
     text = text + TweetTokenizer().tokenize(line)
 
 #Create frequency distribution

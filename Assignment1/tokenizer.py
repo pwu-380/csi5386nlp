@@ -3,6 +3,7 @@
 from nltk.tokenize.casual import TweetTokenizer
 
 #Use nltk.download if you don't have corpus:
+# import nltk
 # nltk.download('punkt')
 
 READFILE = 'data/microblog2011.txt'                 #Open raw file here

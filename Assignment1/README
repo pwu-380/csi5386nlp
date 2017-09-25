@@ -1,0 +1,12 @@
+These classes were authored by Saman Daneshvar and Peter Wu in a collaboration.
+
+tokenizer.py (written in Python 2.7.12)
+This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. Results are stored line terminated, space delimited in SAVEFILE location. It also uses the 'punkt' corpus which must be downloaded first through nltk.download().
+
+tokenCounter.py (written in Python 2.7.12)
+This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. It analyzes the frequency of tokens and unique tokens and outputs a count of each token in SAVEFILE location. It also uses the 'punkt' corpus which must be downloaded first through nltk.download().
+
+tokenizerWordOnly.py (written in Python 2.7.12)
+This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. It then removes all tokens that include punctuation and can also remove stopwords. It then analyzes the frequency of tokens and unique tokens. User can toggle EXCLUDE_STOPWORDS so that it either removes stopwords or not. It also uses the 'punkt' and 'stopwords' corpuses which must be downloaded first through nltk.download().
+
+3.6.1

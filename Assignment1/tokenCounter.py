@@ -17,8 +17,7 @@ file_dist = open(SAVEFILE, 'w')
 text = []
 
 #Aggregate all tokens into list
-for line in range(2):
-    line = file_source.readline()
+for line in file_source:
     line = line.lower()
     # print TweetTokenizer().tokenize(line)
     text = text + TweetTokenizer().tokenize(line)
@@ -32,6 +31,7 @@ unique_tokens = fdist.B()
 print "The number of total tokens:", total_tokens
 print "The number of unique tokens:", unique_tokens
 print "The type/token ratio:", (unique_tokens + 0.0)/total_tokens
+print "Number of tokes that only appear once:", len(fdist.hapaxes())
 
 print "\nTokens that only appear once:"
 print "======================="
@@ -40,14 +40,8 @@ for w in fdist.hapaxes():
 
 print "\nThe most common tokens:"
 print "======================="
-for x in fdist.most_common(10):
+for x in fdist.most_common(150000):
     w, n = x
-    print str(n) + '\t' + w
-
-print "\nCounts of all tokens:"
-print "======================="
-for x in fdist:
-    out = str(fdist[x]) + "\t" + str(x)
+    out = str(n) + '\t' + w
     print out
-    #Save distribution to file
     file_dist.write(out + '\n')

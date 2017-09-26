@@ -20,8 +20,7 @@ file_source = open(READFILE, 'r')
 text = []
 
 #Aggregate all tokens into list
-for line in range(2):
-    line = file_source.readline()
+for line in file_source:
     line = line.lower()
     token_list = TweetTokenizer().tokenize(line)
     for token in token_list:
@@ -29,6 +28,8 @@ for line in range(2):
         if re.search('\W',token) == None:
             #Excludes stopwords
             if (EXCLUDE_STOPWORDS) and (token not in stopwords.words('english')):
+                text.append(token)
+            elif (not EXCLUDE_STOPWORDS):
                 text.append(token)
 
 print text

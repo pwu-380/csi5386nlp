@@ -10,3 +10,7 @@ tokenizerWordOnly.py (written in Python 2.7.12)
 This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. It then removes all tokens that include punctuation and can also remove stopwords. It then analyzes the frequency of tokens and unique tokens. User can toggle EXCLUDE_STOPWORDS so that it either removes stopwords or not. It also uses the 'punkt' and 'stopwords' corpuses which must be downloaded first through nltk.download().
 
 3.6.1
+
+
+posValidate.py (written in Python 2.7.12)
+This script was used to compare token-wise the difference between two files and used to calculate the accuracy of our POS results.

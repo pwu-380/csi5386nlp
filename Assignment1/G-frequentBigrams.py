@@ -19,20 +19,21 @@ WRITE_FILE1 = 'out\G. Bigrams List.txt'  # List of bigrams
 input_file = open(READ_FILE, 'r', encoding="utf8")  # Read mode
 output_file1 = open(WRITE_FILE1, 'w', encoding="utf8") # Write mode
 output_file2 = open('out\G. Most Frequent Bigrams.txt', 'w', encoding="utf8") # Write mode
-log_file = open('out\G. Log.txt', 'w', encoding="utf8")  # Log of the current run
+log_file = open('out\G. Log.txt', 'w', encoding="utf8")  # Write mode. Log of the current run
 
 bgs = []  # list of bigrams in the whole corpus
 words = []  # list of words in the whole corpus
 
 # Tokenize each line
-for i in range(10):
+#for i in range(10):
+    #line = input_file.readline()
+for line in input_file:
     lineWords = []
 
-    line = input_file.readline()
-    print(line, file=log_file)
+    #print(line, file=log_file)
     line = line.lower()  # Change to lowercase
     lineTokens = TweetTokenizer().tokenize(line)
-    print(lineTokens, file=log_file)
+    #print(lineTokens, file=log_file)
 
     # Exclude punctuation & stopwords
     for token in lineTokens:
@@ -42,15 +43,15 @@ for i in range(10):
             if (token not in stopwords.words('english')):
                 lineWords.append(token)  # This will include all tokens except for stopwords and punctuation
 
-    print("LineWords=",lineWords, file=log_file)
+    #print("LineWords=",lineWords, file=log_file)
     words = words + lineWords
-    print("words=",words, file=log_file)
-    print("Line Bigrams:",list(bigrams(lineWords)), file=log_file)
+    #print("words=",words, file=log_file)
+    #print("Line Bigrams:",list(bigrams(lineWords)), file=log_file)
     bgs = bgs + list(bigrams(lineWords))
-    print("bgs=",bgs, file=log_file)
+    #print("bgs=",bgs, file=log_file)
     #out = " ".join(s.encode('ascii', 'ignore') for s in tokens)
     #file_tokenized.write(out+'\n')
-    print('**********', file=log_file)
+    print('*end of line*', file=log_file)
 
 # Write to file
 for item in bgs:
@@ -63,8 +64,8 @@ total_bigrams = fdist1.N()
 unique_bigrams = fdist1.B()
 print("Number of total bigrams:", total_bigrams, file=log_file)
 print("Number of unique bigrams:", unique_bigrams, file=log_file)
-print("10 most common bigrams:", file=log_file)
-mostFrequentBigramsList = fdist1.most_common(10)
+print("100 most frequent bigrams:", file=log_file)
+mostFrequentBigramsList = fdist1.most_common(100)
 print(mostFrequentBigramsList, file=log_file)
 
 # Write to file
@@ -77,6 +78,8 @@ output_file2.close()
 fdist2 = FreqDist(words)
 total_words = fdist2.N()
 unique_words = fdist2.B()
-print("Number of total words:", total_words)
-print("Number of unique words:", unique_words)
-print("Lexical Density (type/token ratio for word-only tokens):", unique_words/total_words)
+print("Total number of words:", total_words, file=log_file)
+print("Number of unique words:", unique_words, file=log_file)
+print("Lexical Density (type/token ratio for word-only tokens):", unique_words/total_words, file=log_file)
+
+log_file.close()

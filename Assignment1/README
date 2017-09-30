@@ -9,8 +9,11 @@ This class opens a line terminated text file from (READFILE location) and tokeni
 tokenizerWordOnly.py (written in Python 2.7.12)
 This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. It then removes all tokens that include punctuation and can also remove stopwords. It then analyzes the frequency of tokens and unique tokens. User can toggle EXCLUDE_STOPWORDS so that it either removes stopwords or not. It also uses the 'punkt' and 'stopwords' corpuses which must be downloaded first through nltk.download().
 
-3.6.1
+G-frequentBigrams.py (written in Python 3.6.1)
+This class opens a line terminated text file from (READFILE location) and tokenizes it using the NLTK library's TweetTokenizer. It then removes all tokens that include punctuation and can also remove stopwords. It then generates the bigrams in corpus and computes the frequency distribution of the bigrams. This class also uses the 'stopwords' corpus which must be downloaded first through nltk.download().
 
+H-MultiWordExpressions.py (written in Python 3.6.1)
+This class opens a line terminated text file from (input_file location) and tokenizes it using the NLTK library's TweetTokenizer. It then removes all tokens that include punctuation and can also remove stopwords. It then generates the multiword expressions (bigram and trigram collocations) in the whole corpus and writes the 100 most frequent collocations into two text files (one for bigrams and another for trigrams). This class also uses the 'stopwords' corpus which must be downloaded first through nltk.download().
 
 posValidate.py (written in Python 2.7.12)
 This script was used to compare token-wise the difference between two files and used to calculate the accuracy of our POS results.

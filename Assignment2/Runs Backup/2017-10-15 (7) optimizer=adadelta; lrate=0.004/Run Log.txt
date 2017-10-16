@@ -1,0 +1,98 @@
+C:\Users\Saman\Miniconda3\envs\py27env\python.exe C:/Users/Saman/GitHub/sent_enc_nli_sick/scripts/sent_enc_nli/train_nli.py
+Loading data
+2017-10-15 17:03:40,783: nli: DEBUG: {'batch_size': 32,
+ 'clip_c': 10.0,
+ 'datasets': ['../../data/word_sequence/premise_SICK_train.txt.tok',
+              '../../data/word_sequence/hypothesis_SICK_train.txt.tok',
+              '../../data/word_sequence/label_SICK_train.txt'],
+ 'decay_c': 0.0,
+ 'decoder': 'lstm',
+ 'dictionary': '../../data/word_sequence/vocab_cased.pkl',
+ 'dim': 300,
+ 'dim_word': 300,
+ 'dispFreq': 10,
+ 'embedding': '',
+ 'encoder': 'lstm',
+ 'finish_after': 10000000,
+ 'lrate': 0.004,
+ 'max_epochs': 5000,
+ 'maxlen': 100,
+ 'n_words': 2260,
+ 'optimizer': 'adadelta',
+ 'patience': 3,
+ 'reload_': False,
+ 'saveFreq': 1000,
+ 'saveto': './sent_enc_nli.npz',
+ 'test_datasets': ['../../data/word_sequence/premise_SICK_test_annotated.txt.tok',
+                   '../../data/word_sequence/hypothesis_SICK_test_annotated.txt.tok',
+                   '../../data/word_sequence/label_SICK_test_annotated.txt'],
+ 'use_dropout': True,
+ 'validFreq': 1000,
+ 'valid_batch_size': 32,
+ 'valid_datasets': ['../../data/word_sequence/premise_SICK_trial.txt.tok',
+                    '../../data/word_sequence/hypothesis_SICK_trial.txt.tok',
+                    '../../data/word_sequence/label_SICK_trial.txt'],
+ 'verbose': False}
+Building model
+Wemb (2260L, 300L)
+encoder_1_W (300L, 1200L)
+encoder_1_U (300L, 1200L)
+encoder_1_b (1200L,)
+encoder_r_1_W (300L, 1200L)
+encoder_r_1_U (300L, 1200L)
+encoder_r_1_b (1200L,)
+encoder_2_W (900L, 1200L)
+encoder_2_U (300L, 1200L)
+encoder_2_b (1200L,)
+encoder_r_2_W (900L, 1200L)
+encoder_r_2_U (300L, 1200L)
+encoder_r_2_b (1200L,)
+encoder_3_W (900L, 1200L)
+encoder_3_U (300L, 1200L)
+encoder_3_b (1200L,)
+encoder_r_3_W (900L, 1200L)
+encoder_r_3_U (300L, 1200L)
+encoder_r_3_b (1200L,)
+ff_layer_1_W (2400L, 300L)
+ff_layer_1_b (300L,)
+ff_layer_output_W (300L, 3L)
+ff_layer_output_b (3L,)
+Building f_log_probs... Done
+Building f_cost... Done
+Computing gradient... Done
+Building optimizers... Done
+Optimization
+2017-10-15 17:07:34,342: nli: DEBUG: Epoch 0 Update 10 Cost 1.04519748688 UD 1.25099992752
+2017-10-15 17:07:45,282: nli: DEBUG: Epoch 0 Update 20 Cost 0.906953155994 UD 1.49599981308
+2017-10-15 17:07:53,990: nli: DEBUG: Epoch 0 Update 30 Cost 1.06403291225 UD 0.786000013351
+2017-10-15 17:08:03,650: nli: DEBUG: Epoch 0 Update 40 Cost 1.03814935684 UD 0.701000213623
+2017-10-15 17:08:12,601: nli: DEBUG: Epoch 0 Update 50 Cost 1.05277657509 UD 0.881999969482
+2017-10-15 17:08:20,444: nli: DEBUG: Epoch 0 Update 60 Cost 0.991518735886 UD 0.565999984741
+2017-10-15 17:08:28,615: nli: DEBUG: Epoch 0 Update 70 Cost 1.05826473236 UD 0.756999969482
+2017-10-15 17:08:36,063: nli: DEBUG: Epoch 0 Update 80 Cost 0.942472457886 UD 0.720999956131
+2017-10-15 17:08:47,674: nli: DEBUG: Epoch 0 Update 90 Cost 0.989672422409 UD 1.16899991035
+2017-10-15 17:08:58,750: nli: DEBUG: Epoch 0 Update 100 Cost 1.09651815891 UD 1.69199991226
+2017-10-15 17:09:10,575: nli: DEBUG: Epoch 0 Update 110 Cost 1.02575564384 UD 1.28999996185
+2017-10-15 17:09:22,290: nli: DEBUG: Epoch 0 Update 120 Cost 0.978556513786 UD 1.26799988747
+2017-10-15 17:09:34,345: nli: DEBUG: Epoch 0 Update 130 Cost 1.10788345337 UD 1.06299996376
+2017-10-15 17:09:47,226: nli: DEBUG: Epoch 0 Update 140 Cost 0.767137229443 UD 1.74699997902
+Seen 4500 samples
+2017-10-15 17:09:59,427: nli: DEBUG: Epoch 1 Update 150 Cost 0.978284478188 UD 1.23000001907
+2017-10-15 17:10:09,420: nli: DEBUG: Epoch 1 Update 160 Cost 1.10167813301 UD 0.896000146866
+2017-10-15 17:10:18,562: nli: DEBUG: Epoch 1 Update 170 Cost 1.16121149063 UD 0.911999940872
+2017-10-15 17:10:27,301: nli: DEBUG: Epoch 1 Update 180 Cost 1.09437906742 UD 1.05100011826
+2017-10-15 17:10:37,467: nli: DEBUG: Epoch 1 Update 190 Cost 1.05674684048 UD 0.934000015259
+2017-10-15 17:10:46,391: nli: DEBUG: Epoch 1 Update 200 Cost 1.00280559063 UD 0.707999944687
+2017-10-15 17:10:54,161: nli: DEBUG: Epoch 1 Update 210 Cost 1.08594143391 UD 0.576999902725
+2017-10-15 17:11:02,293: nli: DEBUG: Epoch 1 Update 220 Cost 0.933268368244 UD 0.681999921799
+2017-10-15 17:11:13,381: nli: DEBUG: Epoch 1 Update 230 Cost 1.02605938911 UD 0.951999902725
+2017-10-15 17:11:25,075: nli: DEBUG: Epoch 1 Update 240 Cost 0.866076529026 UD 1.1210000515
+2017-10-15 17:11:36,938: nli: DEBUG: Epoch 1 Update 250 Cost 0.896494448185 UD 1.12400007248
+2017-10-15 17:11:48,243: nli: DEBUG: Epoch 1 Update 260 Cost 1.00654816628 UD 1.31699991226
+2017-10-15 17:12:00,305: nli: DEBUG: Epoch 1 Update 270 Cost 0.749289095402 UD 1.11800003052
+2017-10-15 17:12:11,673: nli: DEBUG: Epoch 1 Update 280 Cost 0.726717114449 UD 0.950000047684
+Seen 4500 samples
+2017-10-15 17:12:22,938: nli: DEBUG: Epoch 2 Update 290 Cost 1.02628147602 UD 1.01699995995
+2017-10-15 17:12:34,128: nli: DEBUG: Epoch 2 Update 300 Cost 0.860832333565 UD 0.842000007629
+
+Process finished with exit code 1

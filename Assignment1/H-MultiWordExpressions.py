@@ -51,7 +51,8 @@ for item in scored:
     log_file.write(str(item[1]) + "\t" + str(item[0]) + "\n")
 
 #sorted(bigram for bigram, score in scored)
-mostFrequentBigramsList = sorted(finder.nbest(BigramAssocMeasures.raw_freq,100))
+mostFrequentBigramsList = finder.nbest(BigramAssocMeasures.raw_freq,150)
+# To sort the list alphabetically, just use the sorted() function in Python.
 
 # Write to file
 for item in mostFrequentBigramsList:
@@ -65,7 +66,8 @@ scored = finder.score_ngrams(TrigramAssocMeasures.raw_freq)
 for item in scored:
     log_file.write(str(item[1]) + "\t" + str(item[0]) + "\n")
 
-mostFrequentTrigramsList = sorted(finder.nbest(TrigramAssocMeasures.raw_freq,100))
+mostFrequentTrigramsList = finder.nbest(TrigramAssocMeasures.raw_freq,150)
+# To sort the list alphabetically, just use the sorted() function in Python.
 
 # Write to file
 for item in mostFrequentTrigramsList:

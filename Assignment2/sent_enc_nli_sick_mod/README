@@ -1,4 +1,4 @@
-Modification of LSTM deep learning network for predicting semantic relatedness of SICK dataset instead of text entailment classification. 
+Modification of Theano LSTM deep learning network for predicting semantic relatedness of SICK dataset instead of text entailment classification. 
 
 Original script by Qian Chen:
 "Enhanced LSTM for Natural Language Inference" Qian Chen, Xiaodan Zhu, Zhenhua Ling, Si Wei, Hui Jiang, Diana Inkpen. ACL (2017)
